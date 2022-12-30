@@ -1,0 +1,22 @@
+﻿<WMBInternationalization defaultLanguage="en" defaultFileName="Locale" defaultFilePath="i18ntext/" storageType="sessionStorage">
+    <ChildContent>
+        <Router AppAssembly="@typeof(App).Assembly">
+            <Found Context="routeData">
+                <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+                <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+            </Found>
+            <NotFound>
+                <PageTitle>Not found</PageTitle>
+                <LayoutView Layout="@typeof(MainLayout)">
+                    <p role="alert">Sorry, there's nothing at this address.</p>
+                </LayoutView>
+            </NotFound>
+        </Router>
+    </ChildContent>
+    <ChildLoading>
+        <p>Loading your localization data.</p>
+    </ChildLoading>
+    <ChildError>
+        <p>An error was occurred while loading your localization.</p>
+    </ChildError>
+</WMBInternationalization>
